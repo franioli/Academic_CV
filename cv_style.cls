@@ -38,7 +38,7 @@
 %------------------------------------------------------------------------
 %   COLOR PALETTE (Blue Theme)
 %------------------------------------------------------------------------
-\usepackage{xcolor}
+\RequirePackage{xcolor}
 % Main blue (sidebar background, section headers)
 \definecolor{sectcol}{RGB}{25,90,140}
 % Accent blue (employer names, highlights)
