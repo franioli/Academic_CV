@@ -138,13 +138,20 @@
 \newcommand{\mpwidth}{\linewidth-\fboxsep-\fboxsep}
 \newcommand{\mystrut}{\rule[-.3\baselineskip]{0pt}{\baselineskip}}
 
+
 % -- Arrows
 \newcommand{\tzlarrow}{(0,0) -- (0.2,0) -- (0.3,0.2) -- (0.2,0.4) -- (0,0.4) -- (0.1,0.2) -- cycle;}
 \newcommand{\larrow}[1]{\begin{tikzpicture}[scale=0.58]\filldraw[fill=#1,draw=#1!100!black] \tzlarrow\end{tikzpicture}}
 
+% Counter for unique PDF bookmark anchors for cv sections
+\newcounter{cvsectcounter}
+
 % -- Section header
 \newcommand{\cvsection}[1]{%
-    % \vspace{4pt}%
+    % Register TOC entry and add a PDF bookmark (no printed TOC required)
+    \stepcounter{cvsectcounter}% unique id
+    \phantomsection% anchor for hyperref
+    \pdfbookmark[1]{#1}{cvsec\thecvsectcounter}% add bookmark to PDF outline
     \colorbox{sectcol}{\mystrut\makebox[1\mpwidth][l]{%
             \hspace{2pt}\larrow{bgcol}\hspace{-6pt}\larrow{bgcol}\hspace{-6pt}\larrow{bgcol}\hspace{6pt}%
             \textbf{\textcolor{white}{\uppercase{#1}}}%
