@@ -29,3 +29,6 @@
 *.lsg
 *.lbx
 *.run.xml
+
+# Skip generated PDF files
+*.pdf
