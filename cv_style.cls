@@ -131,6 +131,7 @@
 \RequirePackage[colorlinks,urlcolor=accentcol,unicode]{hyperref}
 \RequirePackage[most]{tcolorbox}
 
+
 %=======================================================================%
 %   CUSTOM COMMANDS
 %=======================================================================%

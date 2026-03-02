@@ -1,53 +1,36 @@
 %% ====================================================================
-%% PUBLICATIONS LIST 
+%% PUBLICATIONS LIST FOR AALTO UNIVERSITY APPLICATION
 %% ====================================================================
+%% This file should be compiled with your main CV document
+%% Make sure to have biblatex package with proper settings
+
 \documentclass[11pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[margin=1.8cm]{geometry}
+\usepackage[margin=2.5cm]{geometry}
 \usepackage{enumitem}
-\usepackage{amssymb}
-
-%% Colors and links
-\usepackage{xcolor}
-\definecolor{accentcol}{RGB}{65,140,200}
 \usepackage[colorlinks,urlcolor=accentcol]{hyperref}
-
-% Bibliography
+\usepackage{amssymb}
 \usepackage[
-  backend=biber,
-  style=numeric,
-  sorting=ydnt,
-  defernumbers=true,
-  maxbibnames=999,
-  minbibnames=999,
-  maxcitenames=999,
-  mincitenames=999,
-  giveninits=true
+    backend=biber,
+    style=numeric,
+    sorting=ydnt,
+    defernumbers=true,
+    maxbibnames=999,
+    minbibnames=999,
+    maxcitenames=999,
+    mincitenames=999
 ]{biblatex}
-\addbibresource{publications.bib}
 
-%% Compact bibliography spacing
-\setlength{\bibitemsep}{8pt}
-\setlength{\bibnamesep}{0pt}
-\setlength{\bibinitsep}{0pt}
-\setlength{\biblabelsep}{0.5em}
-\setlength{\bibhang}{1.5em}
-\DeclareNameAlias{author}{family-given}
-\DeclareNameAlias{default}{family-given}
+%% Bibliography file
+\addbibresource{publications.bib}
 
 %% Command to highlight starred publications
 \newcommand{\starred}{\ensuremath{\bigstar}~}
 
-%% Custom command for publication entries with automatic numbering
-\newcounter{pubcount}
-\newcommand{\pubentry}[3][]{%
-    \stepcounter{pubcount}%
-    \noindent[\thepubcount] #1\fullcite{#2} \\
-    \textit{Role: #3}\par\vspace{4pt}%
-}
-
 \begin{document}
+
+\definecolor{accentcol}{RGB}{65,140,200}
 
 \section*{LIST OF PUBLICATIONS}
 
@@ -60,55 +43,98 @@
     \item \textbf{Total number of publications:} 24 (Source: Scopus)
     \item \textbf{Metrics:} H-index: 12, Total Citations: 272+ (as of February 2026)
     \item \textbf{Open Science Commitment:} 100\% of recent research outputs (2020--2025) are available via DOI links
-    \item Five most significant publications are marked with \starred and my specific role in each is described.
+    \item \textbf{Five most significant publications are marked with \starred} and my specific role in each is described.
 \end{itemize}
 
 \subsection*{Complete List of Publications}
 
 \subsubsection*{2025}
 
-\pubentry{gaspari2025glacier}{Software development, field survey execution, photogrammetric data processing, manuscript writing}
-\pubentry{bertulessi2025geomat}{Field survey execution, data processing, manuscript writing}
+\noindent\fullcite{gaspari2025glacier} \\
+\textit{Role: Software development, field survey execution, photogrammetric data processing, manuscript writing}
+
+\vspace{8pt}
+\noindent\fullcite{bertulessi2025geomat} \\
+\textit{Role: Field survey execution, data processing, manuscript writing}
 
 \subsubsection*{2024}
 
-\pubentry{ioli2024multiscale}{My PhD thesis}
-\pubentry[\starred]{ioli2024pfg}{Leading author -- conceived study, developed methodology, conducted fieldwork, performed data processing and analysis, wrote manuscript}
-\pubentry[\starred]{morelli2024coregistering}{Software development, data processing, manuscript writing}
-\pubentry[\starred]{morelli2024toolbox}{Co-developer of open-source software toolbox, data processing, manuscript writing}
-\pubentry{gaspari2024heritage}{Software development, field survey execution, data processing, manuscript writing}
-\pubentry{Fascia2024from3dsurvey}{Software development, paper revision}
-\pubentry{morelli2024legacy}{Software development, data processing, web application implementation, manuscript writing}
-\pubentry{gaspari2024teaching}{Field survey execution, data preparation, database and web application implementation, manuscript writing}
-\pubentry{ioli2024dataset}{Leading author and data curator -- compiled and curated multi-temporal datasets, prepared metadata and documentation}
-\pubentry{fascia2024PONTI}{Software development, paper revision}
+\noindent\starred\fullcite{ioli2024pfg} \\
+\textit{Role: Leading author -- conceived study, developed deep learning methodology, conducted fieldwork, performed data processing and analysis, wrote manuscript}
+
+\vspace{8pt}
+\noindent\starred\fullcite{morelli2024coregistering} \\
+\textit{Role: Software development, data processing, manuscript writing}
+
+\vspace{8pt}
+\noindent\starred\fullcite{morelli2024toolbox} \\
+\textit{Role: Co-developer of open-source software toolbox, algorithm implementation, data processing, manuscript writing}
+
+\vspace{8pt}
+\noindent\fullcite{morelli2024legacy} \\
+\textit{Role: Software development, data processing, web application implementation, manuscript writing}
+
+\vspace{8pt}
+\noindent\fullcite{gaspari2024heritage} \\
+\textit{Role: Software development, field survey execution, data processing, manuscript writing}
+
+\vspace{8pt}
+\noindent\fullcite{gaspari2024teaching} \\
+\textit{Role: Field survey execution, data preparation, database and web application implementation, manuscript writing}
+
+\vspace{8pt}
+\noindent\fullcite{ioli2024dataset} \\
+\textit{Role: Leading author and data curator -- compiled and curated multi-temporal datasets, prepared metadata and documentation}
 
 \subsubsection*{2023}
 
-\pubentry{ioli2023multicamera}{Leading author -- designed multi-camera system, developed data processing workflows, conducted fieldwork, wrote manuscript}
-\pubentry{ioli2023icepy4d}{Leading author -- developed methodology and software, data processing, wrote manuscript}
-\pubentry{morelli2023slam}{Software development, data processing, manuscript writing}
-\pubentry{gaspari2023geodatabase}{Software development, manuscript revision}
-\pubentry{gaspari2023mobile}{Software development, paper revision}
-\pubentry{gaspari2023rediscovering}{Software development, paper revision}
+\noindent\fullcite{ioli2023multicamera} \\
+\textit{Role: Leading author -- designed multi-camera system, developed data processing workflows, conducted fieldwork, wrote manuscript}
+
+\vspace{8pt}
+\noindent\fullcite{ioli2023icepy4d} \\
+\textit{Role: Leading author -- developed open-source Python toolkit, designed software architecture, implemented deep learning integration, wrote manuscript}
+
+\vspace{8pt}
+\noindent\fullcite{morelli2023slam} \\
+\textit{Role: Software development, data processing, manuscript writing}
+
+\vspace{8pt}
+\noindent\fullcite{gaspari2023geodatabase} \\
+\textit{Role: Software development for geodatabase implementation, manuscript writing}
+
+\vspace{8pt}
+\noindent\fullcite{gaspari2023mobile} \\
+\textit{Role: Software development, paper revision}
 
 \subsubsection*{2022}
 
-\pubentry[\starred]{ioli2022rs}{Leading author -- designed monitoring methodology, conducted multi-year UAV surveys, performed photogrammetric processing, wrote manuscript}
-\pubentry[\starred]{ioli2022bridge}{Leading author -- developed crack detection methodology, conducted fieldwork, performed analysis, wrote manuscript}
-\pubentry{gaspari2022integration}{Field survey execution, data processing, manuscript writing}
+\noindent\starred\fullcite{ioli2022rs} \\
+\textit{Role: Leading author -- designed monitoring methodology, conducted multi-year UAV surveys, performed all photogrammetric processing, wrote manuscript}
+
+\vspace{8pt}
+\noindent\starred\fullcite{ioli2022bridge} \\
+\textit{Role: Leading author -- developed crack detection methodology, conducted fieldwork, performed analysis, wrote manuscript}
+
+\vspace{8pt}
+\noindent\fullcite{gaspari2022integration} \\
+\textit{Role: Field survey execution, data integration and processing, manuscript writing}
 
 \subsubsection*{2021}
 
-\pubentry{degaetani2021rs}{Photogrammetric processing, point cloud analysis, manuscript writing}
-\pubentry{ioli2021aat}{Leading author -- developed methodolgy, conducted fieldwork, performed analysis, wrote manuscript}
-\pubentry{rossi2021uav}{Field survey execution, paper revision}
+\noindent\fullcite{degaetani2021rs} \\
+\textit{Role: Photogrammetric processing of multi-temporal imagery spanning 42 years, point cloud analysis and change detection, manuscript writing}
+
+\vspace{8pt}
+\noindent\fullcite{rossi2021uav} \\
+\textit{Role: Field survey execution, paper revision}
 
 \subsubsection*{2020}
 
-\pubentry{ioli2020velocimetry}{Leading author -- conducted field experiments, performed analysis, wrote manuscript}
+\noindent\fullcite{ioli2020velocimetry} \\
+\textit{Role: Leading author -- developed velocimetry methodology, conducted field experiments, performed analysis, wrote manuscript}
 
-\vspace{4pt}
+\vspace{8pt}
 \noindent For a complete publication list with citation metrics, see my Scopus profile: \url{https://www.scopus.com/authid/detail.uri?authorId=57219022961}
 
 \end{document}
