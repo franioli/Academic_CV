@@ -38,7 +38,7 @@
 %------------------------------------------------------------------------
 %   COLOR PALETTE (Blue Theme)
 %------------------------------------------------------------------------
-\usepackage{xcolor}
+\RequirePackage{xcolor}
 % Main blue (sidebar background, section headers)
 \definecolor{sectcol}{RGB}{25,90,140}
 % Accent blue (employer names, highlights)
@@ -79,7 +79,7 @@
 %------------------------------------------------------------------------
 \RequirePackage[
     backend=biber,
-    style=authoryear,
+    style=numeric,
     sorting=none,
     maxbibnames=99,
     doi=true,
@@ -99,13 +99,22 @@
 % }
 
 % Custom bullet bib env
-\defbibenvironment{bibliography}{%
-    \list{}{%
-        \setlength{\leftmargin}{1.5em}%
-        \setlength{\itemsep}{3pt}%
-        \setlength{\parsep}{0pt}}} {\endlist} {%
-    \item[\textcolor{softcol}{$\bullet$}]%
-}
+% \defbibenvironment{bibliography}{%
+%     \list{}{%
+%         \setlength{\leftmargin}{1.5em}%
+%         \setlength{\itemsep}{3pt}%
+%         \setlength{\parsep}{0pt}}} {\endlist} {%
+%     \item[\textcolor{softcol}{$\bullet$}]%
+% }
+
+% Compact numbered bibliography
+\setlength{\bibitemsep}{0pt}
+\setlength{\bibnamesep}{0pt}
+\setlength{\bibinitsep}{0pt}
+
+% Adjust label formatting
+\DeclareFieldFormat{labelnumberwidth}{#1.}
+\setlength{\biblabelsep}{0.5em}
 
 %------------------------------------------------------------------------
 %   TABLES, GRAPHICS, LINKS
@@ -119,7 +128,7 @@
 \RequirePackage{tikz}
 \usetikzlibrary{shapes,backgrounds,mindmap,trees}
 
-\RequirePackage[colorlinks,urlcolor=accentcol]{hyperref}
+\RequirePackage[colorlinks,urlcolor=accentcol,unicode]{hyperref}
 \RequirePackage[most]{tcolorbox}
 
 
